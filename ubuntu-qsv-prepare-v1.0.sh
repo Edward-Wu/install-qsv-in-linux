@@ -49,7 +49,7 @@ apt-get install -y git xutils-dev libpciaccess-dev xserver-xorg-dev cmake
 apt-get install -y libv4l-dev
 apt-get install -y libasound2-dev
 apt-get install -y libsdl2-dev 
-apt-get install autoconf libtool libdrm-dev xorg xorg-dev openbox libx11-dev libgl1-mesa-glx libgl1-mesa-dev
+apt-get install -y autoconf libtool libdrm-dev xorg xorg-dev openbox libx11-dev libgl1-mesa-glx libgl1-mesa-dev
 
 apt-get install -y python3 python3-pip ninja-build
 pip3 install meson
