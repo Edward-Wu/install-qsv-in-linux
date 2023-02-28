@@ -71,6 +71,7 @@ export LIBVA_DRIVERS_PATH=/usr/local/lib/dri
 echo "export ROOT_INSTALL_DIR=/opt/intel/mediasdk/" >>/etc/profile
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOT_INSTALL_DIR/lib/mfx/:$ROOT_INSTALL_DIR/lib/xorg/:/opt/intel/mediasdk/lib:/opt/intel/mediasdk/lib64:/usr/local/lib:/usr/lib64" >>/etc/profile
 source /etc/profile
+echo "source /etc/profile" >>~/.bashrc
 
 #4.install libdrm
 exec_prompt "4.install libdrm"
