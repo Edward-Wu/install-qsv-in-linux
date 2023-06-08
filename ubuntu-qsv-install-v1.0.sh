@@ -93,7 +93,7 @@ if [ "$skip" = "n" ]; then
   cd libva
   ./autogen.sh
   make -j8
-  make install
+  sudo make install
   cd ..
 fi
 
@@ -111,7 +111,7 @@ if [ "$skip" = "n" ]; then
   cd gmmlib/build
   cmake  ..
   make -j8
-  make install
+  sudo make install
   cd ../..
 fi
 
@@ -127,7 +127,7 @@ if [ "$skip" = "n" ]; then
   cd libva-utils
   ./autogen.sh
   make -j8
-  make install
+  sudo make install
   cd ..
 fi
 
@@ -146,7 +146,7 @@ if [ "$skip" = "n" ]; then
   cd media-driver-intel-media-20.4.5
   cmake ..
   make -j$cpu_num
-  make install
+  sudo make install
   cd ../..
 fi
  
@@ -162,7 +162,7 @@ if [ "$skip" = "n" ]; then
   cd MediaSDK/build
   cmake ..
   make -j8
-  make install
+  sudo make install
   cd ../..
 fi
 
@@ -170,9 +170,9 @@ fi
 #第十步：安装libmfx
 exec_prompt "10.install libmfx"
 if [ "$skip" = "n" ]; then
-  apt-get install libmfx1 libmfx-tools -y
-  apt-get install libva-dev libmfx-dev intel-media-va-driver-non-free -y
-  apt-get install vainfo -y
+  sudo apt-get install libmfx1 libmfx-tools -y
+  sudo apt-get install libva-dev libmfx-dev intel-media-va-driver-non-free -y
+  sudo apt-get install vainfo -y
   export XDG_RUNTIME_DIR=/usr/lib/
   #run vainfo, check vaapi 
   exec_prompt "exec vainfo"
@@ -188,7 +188,7 @@ if [ "$skip" = "n" ]; then
   cd x265_git/build/linux
   cmake --enable-shared ../../source -DCMAKE_INSTALL_PREFIX=/opt/intel/mediasdk/
   make -j8
-  make install
+  sudo make install
   cd ../../../
 fi
 
@@ -201,7 +201,7 @@ if [ "$skip" = "n" ]; then
   cd x264
   ./configure --enable-shared --disable-asm --prefix=/opt/intel/mediasdk/
   make -j8
-  make install
+  sudo make install
   cd ..
 fi
 
@@ -215,7 +215,7 @@ if [ "$skip" = "n" ]; then
   cd ffmpeg
   ./configure --enable-encoder=h264_qsv --enable-decoder=h264_qsv --enable-encoder=hevc_qsv --enable-decoder=hevc_qsv --enable-libmfx --enable-libfreetype --enable-libx264 --enable-libx265 --enable-gpl
   make -j8
-  make install
+  sudo make install
   cd ..
 fi
 
