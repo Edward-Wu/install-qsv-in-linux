@@ -54,7 +54,7 @@ exec_prompt()
 
 
 export ROOT_INSTALL_DIR=/opt/intel/mediasdk/
-mkdir -p $ROOT_INSTALL_DIR
+sudo mkdir -p $ROOT_INSTALL_DIR
 
 #export SRC_DIR=$HOME/media_src/
 #mkdir -p $SRC_DIR
@@ -209,19 +209,18 @@ fi
 #第十三步：编译ffmpeg
 exec_prompt "13.install ffmpeg"
 if [ "$skip" = "n" ]; then
-  if [ ! -d x264 ]; then
+  if [ ! -d ffmpeg ]; then
     git clone https://gitee.com/mirrors/ffmpeg.git
   fi
   cd ffmpeg
   ./configure --enable-encoder=h264_qsv --enable-decoder=h264_qsv --enable-encoder=hevc_qsv --enable-decoder=hevc_qsv --enable-libmfx --enable-libfreetype --enable-libx264 --enable-libx265 --enable-gpl
   make -j8
-  sudo make install
   cd ..
 fi
 
 #第十四步：测试
 exec_prompt "14.run ffmpeg"
-ffmpeg
+./ffmpeg/ffmpeg
 
 
 
