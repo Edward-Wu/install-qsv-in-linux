@@ -42,24 +42,24 @@ exec_prompt()
 
 #1. tools chain
 exec_prompt "1.install tools chain"
-apt-get update -y
-pat-get upgrade -y
-apt-get install -y wget cifs-utils autoconf libtool libdrm-dev yasm libghc-x11-dev libxmuu-dev libxfixes-dev libxcb-glx0-dev libgegl-dev libegl1-mesa-dev libcogl-gles2-dev
-apt-get install -y git xutils-dev libpciaccess-dev xserver-xorg-dev cmake
-apt-get install -y libv4l-dev
-apt-get install -y libasound2-dev
-apt-get install -y libsdl2-dev 
-apt-get install -y autoconf libtool libdrm-dev xorg xorg-dev openbox libx11-dev libgl1-mesa-glx libgl1-mesa-dev
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install -y wget cifs-utils autoconf libtool libdrm-dev yasm libghc-x11-dev libxmuu-dev libxfixes-dev libxcb-glx0-dev libgegl-dev libegl1-mesa-dev libcogl-gles2-dev
+sudo apt-get install -y git xutils-dev libpciaccess-dev xserver-xorg-dev cmake
+sudo apt-get install -y libv4l-dev
+sudo apt-get install -y libasound2-dev
+sudo apt-get install -y libsdl2-dev 
+sudo apt-get install -y autoconf libtool libdrm-dev xorg xorg-dev openbox libx11-dev libgl1-mesa-glx libgl1-mesa-dev
 
-apt-get install -y python3 python3-pip ninja-build
+sudo apt-get install -y python3 python3-pip ninja-build
 pip3 install meson
-rm /usr/bin/meson
-ln /usr/local/bin/meson /usr/bin/meson
+sudo rm /usr/bin/meson
+sudo ln /usr/local/bin/meson /usr/bin/meson
 meson -v
 
 #2. update gcc c++
 exec_prompt "2.update gcc c++"
-apt-get install -y gcc g++
-apt-get install -y libgl1-mesa-dev   libglu1-mesa-dev   freeglut3-dev  libglew-dev    libglm-dev    mesa-utils
-apt-get install -y ninja-build
+sudo apt-get install -y gcc g++
+sudo apt-get install -y libgl1-mesa-dev   libglu1-mesa-dev   freeglut3-dev  libglew-dev    libglm-dev    mesa-utils
+sudo apt-get install -y ninja-build
 
