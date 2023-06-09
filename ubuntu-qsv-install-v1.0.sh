@@ -213,7 +213,7 @@ if [ "$skip" = "n" ]; then
     git clone https://gitee.com/mirrors/ffmpeg.git
   fi
   cd ffmpeg
-  ./configure --enable-encoder=h264_qsv --enable-decoder=h264_qsv --enable-encoder=hevc_qsv --enable-decoder=hevc_qsv --enable-libmfx --enable-libfreetype --enable-libx264 --enable-libx265 --enable-gpl
+  ./configure --enable-encoder=h264_qsv --enable-decoder=h264_qsv --enable-encoder=hevc_qsv --enable-decoder=hevc_qsv --enable-libmfx --enable-libfreetype --enable-gpl
   make -j8
   cd ..
 fi
