@@ -51,10 +51,12 @@ sudo apt-get install -y libasound2-dev
 sudo apt-get install -y libsdl2-dev 
 sudo apt-get install -y autoconf libtool libdrm-dev xorg xorg-dev openbox libx11-dev libgl1-mesa-glx libgl1-mesa-dev
 
+sudo rm /usr/bin/meson
 sudo apt-get install -y python3 python3-pip ninja-build
 pip3 install meson
-sudo rm /usr/bin/meson
-sudo ln /usr/local/bin/meson /usr/bin/meson
+if [ -f !"/usr/bin/meson" ] ; then
+    sudo ln /usr/local/bin/meson /usr/bin/meson
+fi
 meson -v
 
 #2. update gcc c++
