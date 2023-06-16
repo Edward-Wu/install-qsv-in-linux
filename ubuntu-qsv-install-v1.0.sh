@@ -77,7 +77,7 @@ if [ "$skip" = "n" ]; then
   fi
   cd drm
   meson builddir/
-  ninja -C builddir/ install
+  sudo ninja -C builddir/ install
   cd ..
 fi
 
