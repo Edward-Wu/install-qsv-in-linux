@@ -52,12 +52,9 @@ exec_prompt()
   fi
 }
 
-
-export ROOT_INSTALL_DIR=/opt/intel/mediasdk/
 sudo mkdir -p $ROOT_INSTALL_DIR
 
-#export SRC_DIR=$HOME/media_src/
-#mkdir -p $SRC_DIR
+export ROOT_INSTALL_DIR=/opt/intel/mediasdk/
 export LIBVA_DRIVER_NAME=iHD
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/intel/mediasdk/lib64/pkgconfig:/opt/intel/mediasdk/lib/pkgconfig:/usr/local/lib/pkgconfig
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOT_INSTALL_DIR/lib/mfx/:$ROOT_INSTALL_DIR/lib/xorg/:/opt/intel/mediasdk/lib:/opt/intel/mediasdk/lib64:/usr/local/lib:/usr/lib64
