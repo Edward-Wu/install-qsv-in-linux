@@ -140,7 +140,7 @@ if [ "$skip" = "n" ]; then
     mkdir build_media && cd build_media
     cd ..
   fi
-  cd media-driver-intel-media-20.4.5
+  cd media-driver-intel-media-20.4.5/build_media
   cmake ..
   make -j$cpu_num
   sudo make install
