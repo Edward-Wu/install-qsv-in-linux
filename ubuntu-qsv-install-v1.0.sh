@@ -137,7 +137,7 @@ if [ "$skip" = "n" ]; then
     cd media-driver-intel-media-20.4.5
     #git clone https://github.com/intel/media-driver
     #cd media-driver
-    mkdir build_media && cd build_media
+    mkdir build_media
     cd ..
   fi
   cd media-driver-intel-media-20.4.5/build_media
