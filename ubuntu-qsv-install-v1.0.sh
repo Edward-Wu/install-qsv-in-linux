@@ -155,6 +155,7 @@ if [ "$skip" = "n" ]; then
     cd MediaSDK
     git checkout -b intel-mediasdk-20.5 origin/intel-mediasdk-20.5
     mkdir build
+    cd ..
   fi
   cd MediaSDK/build
   cmake ..
